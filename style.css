@@ -1,0 +1,11 @@
+.main {
+    height: 100vh;
+  }
+
+html, body, .site-content {
+    height: 100%;
+  }
+
+body {
+    background-color: #afc5ff;
+}
