@@ -2,10 +2,14 @@
   height: 100vh;
 }
 
-html,
-body,
-.site-content {
+html {
   height: 100%;
+}
+body {
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 body {
@@ -23,4 +27,13 @@ h1 {
 
 button {
   margin-top: 10px;
+}
+
+.footer {
+  margin-top: -30px;
+  text-align: center;
+}
+
+.icons-link {
+  color: #000;
 }
