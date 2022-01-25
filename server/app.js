@@ -3,7 +3,8 @@ import fetch from "node-fetch";
 import cors from "cors";
 import * as dotenv from "dotenv";
 const app = express();
-const port = 3000;
+const serverPort = 3000;
+const port = process.env.PORT || serverPort;
 
 dotenv.config();
 app.use(cors());
