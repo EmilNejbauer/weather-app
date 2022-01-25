@@ -25,7 +25,7 @@ function getWeather() {
 }
 
 function fetchWeather(location) {
-  fetch(`http://localhost:3000/?city=${location}`)
+  fetch(`https://aqueous-everglades-81410.herokuapp.com/?city=${location}`)
     .then((response) => response.json())
     .then((data) => {
       city.innerHTML = `${data.name}, ${data.sys.country}`;
