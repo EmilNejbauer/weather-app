@@ -17,14 +17,14 @@ const description = document.getElementById("weather-description");
 const image = document.getElementById("weather-image");
 const alertPlaceholder = document.getElementById("alert-placeholder");
 
-function getWeather() {
-  const city = document.getElementById("city").value;
-  if (city) {
-    fetchWeather(city);
+const getWeather = () => {
+  const cityInput = document.getElementById("city").value;
+  if (cityInput) {
+    fetchWeather(cityInput);
   }
-}
+};
 
-function fetchWeather(location) {
+const fetchWeather = (location) => {
   fetch(`http://localhost:3000/?city=${location}`)
     .then((response) => response.json())
     .then((data) => {
@@ -40,9 +40,9 @@ function fetchWeather(location) {
       Sorry, could not find that city
     </div>`;
     });
-}
+};
 
-function setImage(weather) {
+const setImage = (weather) => {
   switch (weather) {
     case "Thunderstorm":
       image.src = icons.THUNDERSTORM;
@@ -66,6 +66,6 @@ function setImage(weather) {
       image.src = icons.OTHER;
       break;
   }
-}
+};
 
 fetchWeather("warsaw");
